@@ -21,6 +21,7 @@ app.use((req, res, next) => {
 // API location
 app.use('/health', routes.healthRoutes);
 app.use('/', routes.authRoutes);
+app.use('/api', routes.pgsqlRoutes);
 
 // return error when no one route match.
 app.use((req, res) => {
